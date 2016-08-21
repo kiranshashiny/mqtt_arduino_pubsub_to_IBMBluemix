@@ -34,12 +34,7 @@ void setup()
 {
   Serial.begin(9600);
   status = Ethernet.begin(mac);
-  /* sashi
-  if(status == WL_CONNECTED){
-    Serial.println("WiFi Connected!");
-  } else {
-    Serial.println("WiFi Failed!");
-  } */
+  //To do : Check return code.
 }
 
 void loop()
@@ -89,13 +84,13 @@ String buildClientName (){
   return data;
 }
 
-// Sends the string: {d:{"Voltage" : "5"}} to Bluemix
+// Sends the string: {d:{"temperature" : "27.8"}} to Bluemix
 String buildJson() {
   String data = "{";
   data+="\n";
   data+= "\"d\": {";
   data+="\n";
-  data+="\"temperature\": 27.8"; // Note: wrap like \"5\" for a string, this is a number we are sending.
+  data+="\"temperature\": 27.8"; 
   data+="\n";
   data+="}";
   data+="\n";

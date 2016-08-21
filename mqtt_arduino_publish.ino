@@ -95,7 +95,7 @@ String buildJson() {
   data+="\n";
   data+= "\"d\": {";
   data+="\n";
-  data+="\"Volts\": 5"; // Note: wrap like \"5\" for a string, this is a number we are sending.
+  data+="\"temperature\": 27.8"; // Note: wrap like \"5\" for a string, this is a number we are sending.
   data+="\n";
   data+="}";
   data+="\n";
